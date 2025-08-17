@@ -1,0 +1,52 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Pipeline (trying hardone)",
+      "type": "python",
+      "request": "launch",
+      "module": "src.pipeline",
+      "console": "integratedTerminal",
+      "args": [
+        "--config",
+        "config/pipeline.yaml",
+        "--trying-hardone"
+      ]
+    },
+    {
+      "name": "Pipeline (write)",
+      "type": "python",
+      "request": "launch",
+      "module": "src.pipeline",
+      "console": "integratedTerminal",
+      "args": [
+        "--config",
+        "config/pipeline.yaml",
+        "--write"
+      ]
+    },
+    {
+      "name": "Pipeline (write + log note)",
+      "type": "python",
+      "request": "launch",
+      "module": "src.pipeline",
+      "console": "integratedTerminal",
+      "args": [
+        "--config",
+        "config/pipeline.yaml",
+        "--write",
+        "--log",
+        "--note",
+        "${input:attemptNote}"
+      ]
+    }
+  ],
+  "inputs": [
+    {
+      "id": "attemptNote",
+      "type": "promptString",
+      "description": "Short attempt note to log",
+      "default": "tweak threshold"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+paths:
+  repo: data/product_repository.csv
+  spend: data/cybersecurity_spend_records_hard.csv
+  outdir: outputs
+
+match:
+  threshold: 0.76
+  topk: 4
